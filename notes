@@ -1,0 +1,4 @@
+#The main problem I am having is that I am not able to import 'ma' from 'models.schemas'. 
+# I am lost on how to fix that.
+
+# my model classes not importing to my app.py
