@@ -31,6 +31,12 @@ def find_all():
     all_orders = db.session.execute(query).scalars().all()
     return all_orders
 
+def find_all_paginated():
+    # Retrieving all orders with pagination
+    query = select(Order)
+    orders = db.paginate(query, page=1, per_page=10)
+    return orders
+
 def find_by_id(id):
     # Retrieving orders by ID
     query = select(Order).filter(Order.id == id)
