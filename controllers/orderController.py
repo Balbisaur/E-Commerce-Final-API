@@ -42,4 +42,4 @@ def find_by_customer_email():
     if orders:
         return orders_schema.jsonify(orders), 200
     else:
-        return jsonify({'message': 'No orders found for this email'}), 404
+        return jsonify({'message': 'No orders found for this email'}),
