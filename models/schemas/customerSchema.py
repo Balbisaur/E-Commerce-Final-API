@@ -1,5 +1,7 @@
-from marshmallow import fields
 from . import ma
+from marshmallow import fields
+
+
 
 class CustomerSchema(ma.Schema):
     id = fields.Integer(required=False)  
