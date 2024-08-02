@@ -6,6 +6,9 @@ class ProductSchema(ma.Schema):
     name = fields.String(required=True, validate=validate.Length(min=1))
     price = fields.Float(required=True, validate=validate.Range(min=0))
 
+    class Meta:
+        fields = ("id", "name", "price")
+
 # Create an instance of the ProductSchema
 product_schema = ProductSchema()
 products_schema = ProductSchema(many=True)  # For handling multiple products
